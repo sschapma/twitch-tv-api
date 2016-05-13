@@ -1,0 +1,89 @@
+body {
+  background-color: #95C623;
+  text-align:center;
+  font-family:bangers;
+  width:90%;
+  margin-left:5%;
+  margin-right:5%;
+}
+
+.container {
+  margin: 50px auto;
+  margin-bottom: 10px;
+}
+
+.twitchLogo {
+  height: 150px;
+  width: 450px;
+}
+
+button {
+  width:100px;
+  border: 2px solid black;
+  border-radius:5px;
+  margin: 0 5px;
+  height: 30px;
+  background-color:#EFE7DA;
+  font-weight:700;
+}
+
+button:hover {
+  border-style: outset;
+  box-shadow: 4px 4px 4px #888888;
+  background-color:#E55812;
+}
+
+.positionbox {
+  border: 2px solid black;
+  background-color:white;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.offline, .online {
+  display:inline-block;
+  margin:0.5% 0.5%;
+}
+
+.selector {
+  display: inline-block !important;
+  height: 75px;
+  background-color: #EFE7DA;
+  width:400px;
+  border: 2px solid black;  
+  border-radius: 2px;
+}
+
+.selector:hover {
+  border-style: outset;
+  box-shadow: 5px 5px 5px #E55812;
+}
+.livePreview {
+  display:inline-block;
+  width: 75px;
+  height:75px;
+  float:right;
+  border-radius:500px;
+}
+.channelInfo {
+  float: left;
+  color:#0E4749;
+  font-size:2em;
+  font-weight: 700;
+  padding-left:2px;
+  text-align:left;
+  padding-top:5px;
+}
+
+.grayText {
+  font-family:boogaloo;
+  font-weight: 500;
+  text-align:left;
+  float:left;
+  color: #E55812;
+  font-size:0.7em;
+  padding-top:10px;
+}
+
+
