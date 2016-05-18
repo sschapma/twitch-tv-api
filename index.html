@@ -3,40 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>Twitch.tv JSON API</title>
-    
-    
-    
-    
-        <link rel="stylesheet" href="css/style.css">
 
-    
-    
-    
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Bangers|Boogaloo' rel='stylesheet' type='text/css'>
   </head>
 
+
   <body>
+    <div class="container"> <!--Creates upper container with logo and buttons-->
+      <img class="twitchLogo" src="http://s22.postimg.org/qnjv2cl01/Twitch_Black_Logo.png" alt="Twitch Logo"><br><br>
+      <button id="all">ALL</button>
+      <button id="online">ONLINE</button>
+      <button id="offline">OFFLINE</button>
+    </div>
 
-    <link href='https://fonts.googleapis.com/css?family=Bangers|Boogaloo' rel='stylesheet' type='text/css'>
+    <!--Where the user information will go-->
+    <div id="testContainer"></div>
 
-<body>
-<div class="container">
-  <img class="twitchLogo" src="http://s22.postimg.org/qnjv2cl01/Twitch_Black_Logo.png" alt="Twitch Logo"><br><br>
-  <button id="all">ALL</button>
-  <button id="online">ONLINE</button>
-  <button id="offline">OFFLINE</button>
-</div>
-
-
-<div id="testContainer">
-  </div>
-</body>
     <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+    <script src="js/index.js"></script>
 
-        <script src="js/index.js"></script>
-
-    
-    
-    
   </body>
 </html>

@@ -1,4 +1,11 @@
-var streamers = ["freecodecamp", "riotgames", "starladder1", "beyondthesummit", "tsm_theoddone", "Tsm_dyrus", "esl_csgo", "garenatw", "smitegame", "nl_kripp", "Nightblue3", "esl_lol", "imaqtpie", "asiagodtonegg3be0", "sodapoppin", "trick2g", "LIRIK", "gamesdonequick", "PhantomL0rd", "faceittv", "syndicate", "summit1g", "goldglove", "captainsparklez", "imaqtpie", "tsm_bjergsen", "ggnetworktv", "jennythesquirrel", "w1tch_house", "HSdogdog"];
+//list of streamers
+var streamers = ["freecodecamp", "riotgames", "starladder1", "beyondthesummit",
+                 "tsm_theoddone", "Tsm_dyrus", "esl_csgo", "garenatw", "smitegame",
+                 "nl_kripp", "Nightblue3", "esl_lol", "imaqtpie", "asiagodtonegg3be0",
+                 "sodapoppin", "trick2g", "LIRIK", "gamesdonequick", "PhantomL0rd",
+                 "faceittv", "syndicate", "summit1g", "goldglove", "captainsparklez",
+                 "imaqtpie", "tsm_bjergsen", "ggnetworktv", "jennythesquirrel",
+                 "w1tch_house", "HSdogdog"];
 
 function buildList() {
   streamers.forEach(function(streamer) {
@@ -13,7 +20,9 @@ function buildList() {
       var currentGame;
       var sorted;
 
+      // creates modal for offline user
       if (data.stream === null) {
+        //checks name length and cuts it off if too long
         if (streamer.length < 16) {
           currentGame = streamer + " is offline";
         } else {
@@ -24,12 +33,14 @@ function buildList() {
         viewers = "No";
         status = "<div class='offline'>"
         sorted = 1;
-        
+
+        // creates modal for undefined user
       } else if (data.stream === undefined) {
         currentGame = "Account Closed";
         status = "<div class='offline'>"
         sorted = 2;
-        
+
+        //creates modal for online user
       } else {
         viewers = data.stream.viewers;
         currentGame = data.stream.game;
@@ -56,20 +67,22 @@ function buildList() {
         html += "<span class='grayText'>" + viewers + " viewers on " + name + "</span></div>";
         html += livePreviewHTML + "</a>";
         html += "</div></div>";
-        
+
+        //if "all" is selected, this places online first
         if (sorted===0) {
           $('#testContainer').prepend(html);
         } else {
           $('#testContainer').append(html);
         }
-        
+
+        // button functions to display online/offline/all w/ animations
         $('.online').hide();
         $('.offline').hide();
         setTimeout(function(){
           $('.online').show("fade", 2000)
         }, 2500)
-        
-        
+
+
         $('#all').click(function() {
           $('.offline').hide("fade", 2000);
           $('.online').hide("fade", 2000);
@@ -78,7 +91,7 @@ function buildList() {
           $('.offline').show("fade", 2000)
         }, 2500)
         })
-       
+
         $('#online').click(function() {
           $('.offline').hide("fade", 2000);
           $('.online').hide("fade", 2000);
@@ -86,7 +99,7 @@ function buildList() {
           $('.online').show("fade", 2000)
         }, 2500)
         })
-       
+
         $('#offline').click(function() {
           $('.online').hide("fade", 2000);
           $('.offline').hide("fade", 2000);
@@ -94,7 +107,7 @@ function buildList() {
           $('.offline').show("fade", 2000)
         }, 2500)
         })
-        
+
       }); /* getJSON channel */
     }); /* /getJSON streamer */
   }); /* /streamers.forEach */
